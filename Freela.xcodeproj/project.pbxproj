@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273824E2C1DF000463AA /* AppDelegate.swift */; };
+		AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273A24E2C1DF000463AA /* SceneDelegate.swift */; };
+		AE83273D24E2C1DF000463AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273C24E2C1DF000463AA /* ViewController.swift */; };
+		AE83274024E2C1DF000463AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83273E24E2C1DF000463AA /* Main.storyboard */; };
+		AE83274224E2C1E3000463AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE83274124E2C1E3000463AA /* Assets.xcassets */; };
+		AE83274524E2C1E3000463AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */; };
+		AE83275024E2C1E3000463AA /* FreelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83274F24E2C1E3000463AA /* FreelaTests.swift */; };
+		AE83275B24E2C1E3000463AA /* FreelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83275A24E2C1E3000463AA /* FreelaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE83274C24E2C1E3000463AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE83272D24E2C1DF000463AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE83273424E2C1DF000463AA;
+			remoteInfo = Freela;
+		};
+		AE83275724E2C1E3000463AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE83272D24E2C1DF000463AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE83273424E2C1DF000463AA;
+			remoteInfo = Freela;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE83273524E2C1DF000463AA /* Freela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freela.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE83273824E2C1DF000463AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE83273A24E2C1DF000463AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE83273C24E2C1DF000463AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE83273F24E2C1DF000463AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE83274124E2C1E3000463AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE83274424E2C1E3000463AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE83274624E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE83274B24E2C1E3000463AA /* FreelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE83274F24E2C1E3000463AA /* FreelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelaTests.swift; sourceTree = "<group>"; };
+		AE83275124E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE83275624E2C1E3000463AA /* FreelaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE83275A24E2C1E3000463AA /* FreelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelaUITests.swift; sourceTree = "<group>"; };
+		AE83275C24E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE83273224E2C1DF000463AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83274824E2C1E3000463AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83275324E2C1E3000463AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE83272C24E2C1DF000463AA = {
+			isa = PBXGroup;
+			children = (
+				AE83273724E2C1DF000463AA /* Freela */,
+				AE83274E24E2C1E3000463AA /* FreelaTests */,
+				AE83275924E2C1E3000463AA /* FreelaUITests */,
+				AE83273624E2C1DF000463AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE83273624E2C1DF000463AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE83273524E2C1DF000463AA /* Freela.app */,
+				AE83274B24E2C1E3000463AA /* FreelaTests.xctest */,
+				AE83275624E2C1E3000463AA /* FreelaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE83273724E2C1DF000463AA /* Freela */ = {
+			isa = PBXGroup;
+			children = (
+				AE83273824E2C1DF000463AA /* AppDelegate.swift */,
+				AE83273A24E2C1DF000463AA /* SceneDelegate.swift */,
+				AE83273C24E2C1DF000463AA /* ViewController.swift */,
+				AE83273E24E2C1DF000463AA /* Main.storyboard */,
+				AE83274124E2C1E3000463AA /* Assets.xcassets */,
+				AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */,
+				AE83274624E2C1E3000463AA /* Info.plist */,
+			);
+			path = Freela;
+			sourceTree = "<group>";
+		};
+		AE83274E24E2C1E3000463AA /* FreelaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE83274F24E2C1E3000463AA /* FreelaTests.swift */,
+				AE83275124E2C1E3000463AA /* Info.plist */,
+			);
+			path = FreelaTests;
+			sourceTree = "<group>";
+		};
+		AE83275924E2C1E3000463AA /* FreelaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE83275A24E2C1E3000463AA /* FreelaUITests.swift */,
+				AE83275C24E2C1E3000463AA /* Info.plist */,
+			);
+			path = FreelaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE83273424E2C1DF000463AA /* Freela */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE83275F24E2C1E3000463AA /* Build configuration list for PBXNativeTarget "Freela" */;
+			buildPhases = (
+				AE83273124E2C1DF000463AA /* Sources */,
+				AE83273224E2C1DF000463AA /* Frameworks */,
+				AE83273324E2C1DF000463AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Freela;
+			productName = Freela;
+			productReference = AE83273524E2C1DF000463AA /* Freela.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE83274A24E2C1E3000463AA /* FreelaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE83276224E2C1E3000463AA /* Build configuration list for PBXNativeTarget "FreelaTests" */;
+			buildPhases = (
+				AE83274724E2C1E3000463AA /* Sources */,
+				AE83274824E2C1E3000463AA /* Frameworks */,
+				AE83274924E2C1E3000463AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE83274D24E2C1E3000463AA /* PBXTargetDependency */,
+			);
+			name = FreelaTests;
+			productName = FreelaTests;
+			productReference = AE83274B24E2C1E3000463AA /* FreelaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE83275524E2C1E3000463AA /* FreelaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE83276524E2C1E3000463AA /* Build configuration list for PBXNativeTarget "FreelaUITests" */;
+			buildPhases = (
+				AE83275224E2C1E3000463AA /* Sources */,
+				AE83275324E2C1E3000463AA /* Frameworks */,
+				AE83275424E2C1E3000463AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE83275824E2C1E3000463AA /* PBXTargetDependency */,
+			);
+			name = FreelaUITests;
+			productName = FreelaUITests;
+			productReference = AE83275624E2C1E3000463AA /* FreelaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE83272D24E2C1DF000463AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Albert Rayneer";
+				TargetAttributes = {
+					AE83273424E2C1DF000463AA = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					AE83274A24E2C1E3000463AA = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = AE83273424E2C1DF000463AA;
+					};
+					AE83275524E2C1E3000463AA = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = AE83273424E2C1DF000463AA;
+					};
+				};
+			};
+			buildConfigurationList = AE83273024E2C1DF000463AA /* Build configuration list for PBXProject "Freela" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE83272C24E2C1DF000463AA;
+			productRefGroup = AE83273624E2C1DF000463AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE83273424E2C1DF000463AA /* Freela */,
+				AE83274A24E2C1E3000463AA /* FreelaTests */,
+				AE83275524E2C1E3000463AA /* FreelaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE83273324E2C1DF000463AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE83274524E2C1E3000463AA /* LaunchScreen.storyboard in Resources */,
+				AE83274224E2C1E3000463AA /* Assets.xcassets in Resources */,
+				AE83274024E2C1DF000463AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83274924E2C1E3000463AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83275424E2C1E3000463AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE83273124E2C1DF000463AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE83273D24E2C1DF000463AA /* ViewController.swift in Sources */,
+				AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */,
+				AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83274724E2C1E3000463AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE83275024E2C1E3000463AA /* FreelaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE83275224E2C1E3000463AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE83275B24E2C1E3000463AA /* FreelaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE83274D24E2C1E3000463AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE83273424E2C1DF000463AA /* Freela */;
+			targetProxy = AE83274C24E2C1E3000463AA /* PBXContainerItemProxy */;
+		};
+		AE83275824E2C1E3000463AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE83273424E2C1DF000463AA /* Freela */;
+			targetProxy = AE83275724E2C1E3000463AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE83273E24E2C1DF000463AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE83273F24E2C1DF000463AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE83274424E2C1E3000463AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE83275D24E2C1E3000463AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE83275E24E2C1E3000463AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE83276024E2C1E3000463AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = Freela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.Freela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE83276124E2C1E3000463AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = Freela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.Freela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE83276324E2C1E3000463AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = FreelaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.FreelaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Freela.app/Freela";
+			};
+			name = Debug;
+		};
+		AE83276424E2C1E3000463AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = FreelaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.FreelaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Freela.app/Freela";
+			};
+			name = Release;
+		};
+		AE83276624E2C1E3000463AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = FreelaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.FreelaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Freela;
+			};
+			name = Debug;
+		};
+		AE83276724E2C1E3000463AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVQMR29BJU;
+				INFOPLIST_FILE = FreelaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freela.FreelaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Freela;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE83273024E2C1DF000463AA /* Build configuration list for PBXProject "Freela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE83275D24E2C1E3000463AA /* Debug */,
+				AE83275E24E2C1E3000463AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE83275F24E2C1E3000463AA /* Build configuration list for PBXNativeTarget "Freela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE83276024E2C1E3000463AA /* Debug */,
+				AE83276124E2C1E3000463AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE83276224E2C1E3000463AA /* Build configuration list for PBXNativeTarget "FreelaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE83276324E2C1E3000463AA /* Debug */,
+				AE83276424E2C1E3000463AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE83276524E2C1E3000463AA /* Build configuration list for PBXNativeTarget "FreelaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE83276624E2C1E3000463AA /* Debug */,
+				AE83276724E2C1E3000463AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE83272D24E2C1DF000463AA /* Project object */;
+}
