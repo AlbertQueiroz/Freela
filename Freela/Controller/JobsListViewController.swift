@@ -11,7 +11,12 @@ import UIKit
 class JobsListViewController: UIViewController {
 
     //MARK: Outlets
-    @IBOutlet weak var tableView: UITableView!
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+        
+    }()
     
     lazy var profileButton: UIBarButtonItem = {
         let button = UIBarButtonItem()
@@ -29,10 +34,21 @@ class JobsListViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Jobs"
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        setupTableView()
             
         self.navigationItem.rightBarButtonItem = profileButton
+    }
+    
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
     }
     
     @objc func goToProfile() {

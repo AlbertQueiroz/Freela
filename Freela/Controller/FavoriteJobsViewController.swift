@@ -8,33 +8,14 @@
 
 import UIKit
 
-class FavoriteJobsViewController: UIViewController {
-
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        return tableView
-        
-    }()
+class FavoriteJobsViewController: JobsListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .white
         self.title = "Favorite Jobs"
+        self.navigationItem.rightBarButtonItem = nil
         
-    }
-    
-    func setupTableView() {
-        self.view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        ])
     }
     
 }
