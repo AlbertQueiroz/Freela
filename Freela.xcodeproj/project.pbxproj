@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273824E2C1DF000463AA /* AppDelegate.swift */; };
 		AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273A24E2C1DF000463AA /* SceneDelegate.swift */; };
-		AE83273D24E2C1DF000463AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273C24E2C1DF000463AA /* ViewController.swift */; };
-		AE83274024E2C1DF000463AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83273E24E2C1DF000463AA /* Main.storyboard */; };
 		AE83274224E2C1E3000463AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE83274124E2C1E3000463AA /* Assets.xcassets */; };
 		AE83274524E2C1E3000463AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */; };
 		AE83275024E2C1E3000463AA /* FreelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83274F24E2C1E3000463AA /* FreelaTests.swift */; };
 		AE83275B24E2C1E3000463AA /* FreelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83275A24E2C1E3000463AA /* FreelaUITests.swift */; };
+		AE83276F24E2C341000463AA /* JobsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83276E24E2C341000463AA /* JobsList.storyboard */; };
+		AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277024E2C351000463AA /* JobsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		AE83273524E2C1DF000463AA /* Freela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83273824E2C1DF000463AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE83273A24E2C1DF000463AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE83273C24E2C1DF000463AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE83273F24E2C1DF000463AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE83274124E2C1E3000463AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE83274424E2C1E3000463AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE83274624E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		AE83275624E2C1E3000463AA /* FreelaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83275A24E2C1E3000463AA /* FreelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelaUITests.swift; sourceTree = "<group>"; };
 		AE83275C24E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE83276E24E2C341000463AA /* JobsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsList.storyboard; sourceTree = "<group>"; };
+		AE83277024E2C351000463AA /* JobsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,10 @@
 		AE83273724E2C1DF000463AA /* Freela */ = {
 			isa = PBXGroup;
 			children = (
-				AE83273824E2C1DF000463AA /* AppDelegate.swift */,
-				AE83273A24E2C1DF000463AA /* SceneDelegate.swift */,
-				AE83273C24E2C1DF000463AA /* ViewController.swift */,
-				AE83273E24E2C1DF000463AA /* Main.storyboard */,
-				AE83274124E2C1E3000463AA /* Assets.xcassets */,
-				AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */,
-				AE83274624E2C1E3000463AA /* Info.plist */,
+				AE83276A24E2C2B4000463AA /* Model */,
+				AE83276B24E2C2B9000463AA /* View */,
+				AE83276C24E2C2C1000463AA /* Controller */,
+				AE83276D24E2C2FE000463AA /* AppConfig */,
 			);
 			path = Freela;
 			sourceTree = "<group>";
@@ -126,6 +123,41 @@
 				AE83275C24E2C1E3000463AA /* Info.plist */,
 			);
 			path = FreelaUITests;
+			sourceTree = "<group>";
+		};
+		AE83276A24E2C2B4000463AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE83276B24E2C2B9000463AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */,
+				AE83276E24E2C341000463AA /* JobsList.storyboard */,
+				AE83274124E2C1E3000463AA /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE83276C24E2C2C1000463AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE83277024E2C351000463AA /* JobsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE83276D24E2C2FE000463AA /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				AE83273824E2C1DF000463AA /* AppDelegate.swift */,
+				AE83273A24E2C1DF000463AA /* SceneDelegate.swift */,
+				AE83274624E2C1E3000463AA /* Info.plist */,
+			);
+			path = AppConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE83274524E2C1E3000463AA /* LaunchScreen.storyboard in Resources */,
+				AE83276F24E2C341000463AA /* JobsList.storyboard in Resources */,
 				AE83274224E2C1E3000463AA /* Assets.xcassets in Resources */,
-				AE83274024E2C1DF000463AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE83273D24E2C1DF000463AA /* ViewController.swift in Sources */,
+				AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */,
 				AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */,
 				AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE83273E24E2C1DF000463AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE83273F24E2C1DF000463AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
