@@ -21,6 +21,7 @@
 		AE83277924E2CC5B000463AA /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277824E2CC5B000463AA /* JobDetailsViewController.swift */; };
 		AE83277B24E2CC65000463AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277A24E2CC65000463AA /* ProfileViewController.swift */; };
 		AE83277D24E2CC9A000463AA /* FavoriteJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277C24E2CC9A000463AA /* FavoriteJobsViewController.swift */; };
+		AE83277F24E2E510000463AA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277E24E2E510000463AA /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		AE83277824E2CC5B000463AA /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		AE83277A24E2CC65000463AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE83277C24E2CC9A000463AA /* FavoriteJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsViewController.swift; sourceTree = "<group>"; };
+		AE83277E24E2E510000463AA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				AE83277424E2C814000463AA /* JobDetails.storyboard */,
 				AE83277224E2C7BD000463AA /* Profile.storyboard */,
 				AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */,
+				AE83277E24E2E510000463AA /* JobTableViewCell.swift */,
 				AE83274124E2C1E3000463AA /* Assets.xcassets */,
 			);
 			path = View;
@@ -318,6 +321,7 @@
 				AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */,
 				AE83277724E2CBFC000463AA /* Job.swift in Sources */,
 				AE83277924E2CC5B000463AA /* JobDetailsViewController.swift in Sources */,
+				AE83277F24E2E510000463AA /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

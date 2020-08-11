@@ -10,7 +10,12 @@ import UIKit
 
 class JobsListViewController: UIViewController {
 
-    //MARK: Outlets
+    var jobs = [Job]()
+    
+    //MARK: Model
+    
+    
+    //MARK: Views
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,6 +46,7 @@ class JobsListViewController: UIViewController {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "jobCell")
         self.view.addSubview(tableView)
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
@@ -64,7 +70,10 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell") as! JobTableViewCell
+        cell.config(title: "Very good job", payment: "100", time: "10 hours", requirements: "23")
+        
+        return cell
     }
     
     
