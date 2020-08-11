@@ -18,16 +18,21 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
-                                    <rect key="frame" x="94.5" y="8" width="225" height="184"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
+                                    <rect key="frame" x="94.5" y="9.5" width="225" height="181.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="0eb-g7-qSi" secondAttribute="height" multiplier="225:184" id="1Rs-SD-u3Z"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="0eb-g7-qSi" secondAttribute="bottom" constant="8" id="efY-Ps-U8N"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="0eb-g7-qSi" secondAttribute="bottom" id="efY-Ps-U8N"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="centerX" secondItem="gGE-cn-2lC" secondAttribute="centerX" id="pq5-Lv-S6V"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="top" secondItem="gGE-cn-2lC" secondAttribute="top" constant="8" id="uNI-Qb-BDl"/>
                             </constraints>
@@ -64,7 +69,7 @@
                             <outlet property="delegate" destination="vw4-7i-mAq" id="ZxZ-IW-j0e"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="T1J-3U-8oF"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="T1J-3U-8oF"/>
                     <connections>
                         <outlet property="profileImage" destination="0eb-g7-qSi" id="9fw-go-o9z"/>
                     </connections>
@@ -93,6 +98,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

@@ -20,8 +20,7 @@ class JobsListViewController: UIViewController {
     
     lazy var profileButton: UIBarButtonItem = {
         let button = UIBarButtonItem()
-        button.image = UIImage(named: "")
-        button.title = "Profile"
+        button.image = .actions
         button.target = self
         button.action = #selector(goToProfile)
         

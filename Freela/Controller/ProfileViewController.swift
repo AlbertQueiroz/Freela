@@ -15,6 +15,9 @@ class ProfileViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.height/2
+        self.title = "Profile"
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
