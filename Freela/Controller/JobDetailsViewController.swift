@@ -1,5 +1,5 @@
 //
-//  JobsListViewController.swift
+//  JobDetailsViewController.swift
 //  Freela
 //
 //  Created by Albert Rayneer on 11/08/20.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class JobsListViewController: UIViewController {
+class JobDetailsViewController: UIViewController {
 
-    //MARK: Outlets
-    @IBOutlet weak var tableView: UITableView!
-
-    //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
-
 }

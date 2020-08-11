@@ -1,5 +1,5 @@
 //
-//  JobsListViewController.swift
+//  FavoriteJobsViewController.swift
 //  Freela
 //
 //  Created by Albert Rayneer on 11/08/20.
@@ -8,16 +8,12 @@
 
 import UIKit
 
-class JobsListViewController: UIViewController {
+class FavoriteJobsViewController: UIViewController {
 
-    //MARK: Outlets
-    @IBOutlet weak var tableView: UITableView!
-
-    //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
     
-
 }
