@@ -14,7 +14,6 @@ class JobsListViewController: UIViewController {
     
     // MARK: Model
     
-    
     // MARK: Views
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -77,6 +76,5 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell ?? UITableViewCell()
     }
-    
     
 }

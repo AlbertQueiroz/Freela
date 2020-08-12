@@ -12,7 +12,6 @@ class ProfileViewController: UITableViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
