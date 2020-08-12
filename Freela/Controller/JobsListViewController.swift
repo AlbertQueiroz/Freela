@@ -12,10 +12,10 @@ class JobsListViewController: UIViewController {
 
     var jobs = [Job]()
     
-    //MARK: Model
+    // MARK: Model
     
     
-    //MARK: Views
+    // MARK: Views
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ class JobsListViewController: UIViewController {
         
     }()
 
-    //MARK: ViewController Lifecycle
+    // MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,17 +63,19 @@ class JobsListViewController: UIViewController {
     }
 }
 
-//MARK: TableView Delegate and DataSource
+// MARK: TableView Delegate and DataSource
 extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell") as! JobTableViewCell
-        cell.config(title: "Very good job", payment: "100", time: "10 hours", requirements: "23")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell") as? JobTableViewCell
+        if let cell = cell {
+            cell.config(title: "Very good job", payment: "100", time: "10 hours", requirements: "23")
+        }
         
-        return cell
+        return cell ?? UITableViewCell()
     }
     
     
