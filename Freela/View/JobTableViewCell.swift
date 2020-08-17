@@ -12,46 +12,75 @@ class JobTableViewCell: UITableViewCell {
 
     let title: UILabel = {
         let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
     
-    let paymentIcon: UIImageView = {
-        let imageView = UIImageView()
-        
-        return imageView
-    }()
-
-    let payment: UILabel = {
+    let location: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
         return label
     }()
     
-    let timeIcon: UIImageView = {
-        let imageView = UIImageView()
-        
-        return imageView
-    }()
-    
-    let time: UILabel = {
+    let type: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .darkGray
         return label
     }()
     
-    let requirementsIcon: UIImageView = {
-        let imageView = UIImageView()
-        
-        return imageView
-    }()
-    
-    let requirements: UILabel = {
+    let company: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .darkGray
         return label
     }()
     
-    func config(title: String, payment: String, time: String, requirements: String) {
+    let favorite: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    let stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.alignment = .leading
+        stack.axis = .vertical
+        stack.contentMode = .scaleAspectFit
+        stack.spacing = 4
+        stack.distribution = .equalSpacing
+        return stack
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.accessoryType = .disclosureIndicator
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func config(title: String, company: String, type: String, location: String) {
         self.title.text = title
-        self.payment.text = payment
-        self.time.text = time
-        self.requirements.text = requirements
+        self.company.text = company
+        self.type.text = type
+        self.location.text = location
+    }
+    
+    func setupViews() {
+        stackView.addArrangedSubview(title)
+        stackView.addArrangedSubview(type)
+        stackView.addArrangedSubview(company)
+        stackView.addArrangedSubview(location)
+        
+        self.contentView.addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16)
+        ])
     }
 }

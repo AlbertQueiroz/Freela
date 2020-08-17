@@ -10,7 +10,13 @@ import UIKit
 
 class JobsListViewController: UIViewController {
 
-    var jobs = [Job]()
+    var jobs = [Job]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     // MARK: Model
     
@@ -38,8 +44,8 @@ class JobsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        JobRepository().readAll { (job) in
-            print(job)
+        JobRepository().readAll { (jobs) in
+            self.jobs = jobs
         }
         
         self.title = "Jobs"
@@ -70,17 +76,25 @@ class JobsListViewController: UIViewController {
 
 // MARK: TableView Delegate and DataSource
 extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        jobs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let job = jobs[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell") as? JobTableViewCell
-        if let cell = cell {
-            cell.config(title: "Very good job", payment: "100", time: "10 hours", requirements: "23")
+        
+        if let cell = cell, let title = job.title, let company = job.company, let type = job.type, let location = job.location {
+            cell.config(title: title, company: company, type: type, location: location)
+            return cell
         }
         
-        return cell ?? UITableViewCell()
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
     }
     
 }
