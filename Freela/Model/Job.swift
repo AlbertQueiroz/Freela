@@ -8,4 +8,7 @@
 
 import Foundation
 
-struct Job: Codable {}
+struct Job: Codable {
+    
+    
+}

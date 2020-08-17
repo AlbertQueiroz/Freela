@@ -24,7 +24,9 @@ class JobsListViewController: UIViewController {
     
     lazy var profileButton: UIBarButtonItem = {
         let button = UIBarButtonItem()
+        
         button.image = .actions
+//        button.image = UIImage(named: "profileImage")
         button.target = self
         button.action = #selector(goToProfile)
         
@@ -35,6 +37,10 @@ class JobsListViewController: UIViewController {
     // MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        JobRepository().readAll { (job) in
+            print(job)
+        }
         
         self.title = "Jobs"
         setupTableView()

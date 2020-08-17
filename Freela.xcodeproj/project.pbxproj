@@ -22,6 +22,10 @@
 		AE83277B24E2CC65000463AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277A24E2CC65000463AA /* ProfileViewController.swift */; };
 		AE83277D24E2CC9A000463AA /* FavoriteJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277C24E2CC9A000463AA /* FavoriteJobsViewController.swift */; };
 		AE83277F24E2E510000463AA /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277E24E2E510000463AA /* JobTableViewCell.swift */; };
+		AE944C6124E56D3D00B85B9D /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6024E56D3D00B85B9D /* JobRepository.swift */; };
+		AE944C6424E575C200B85B9D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6324E575C200B85B9D /* Router.swift */; };
+		AE944C6624E5760300B85B9D /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6524E5760300B85B9D /* JobAPI.swift */; };
+		AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6924EAAF1D00B85B9D /* HTTP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		AE83277A24E2CC65000463AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE83277C24E2CC9A000463AA /* FavoriteJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobsViewController.swift; sourceTree = "<group>"; };
 		AE83277E24E2E510000463AA /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		AE944C6024E56D3D00B85B9D /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
+		AE944C6324E575C200B85B9D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AE944C6524E5760300B85B9D /* JobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPI.swift; sourceTree = "<group>"; };
+		AE944C6924EAAF1D00B85B9D /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 		AE83272C24E2C1DF000463AA = {
 			isa = PBXGroup;
 			children = (
+				AE944C6924EAAF1D00B85B9D /* HTTP.swift */,
 				AE83273724E2C1DF000463AA /* Freela */,
 				AE83274E24E2C1E3000463AA /* FreelaTests */,
 				AE83275924E2C1E3000463AA /* FreelaUITests */,
@@ -113,6 +122,8 @@
 		AE83273724E2C1DF000463AA /* Freela */ = {
 			isa = PBXGroup;
 			children = (
+				AE944C6224E5757300B85B9D /* Services */,
+				AE944C5F24E56D2700B85B9D /* Repositories */,
 				AE83276A24E2C2B4000463AA /* Model */,
 				AE83276B24E2C2B9000463AA /* View */,
 				AE83276C24E2C2C1000463AA /* Controller */,
@@ -179,6 +190,23 @@
 				AE83274624E2C1E3000463AA /* Info.plist */,
 			);
 			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		AE944C5F24E56D2700B85B9D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AE944C6024E56D3D00B85B9D /* JobRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AE944C6224E5757300B85B9D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AE944C6324E575C200B85B9D /* Router.swift */,
+				AE944C6524E5760300B85B9D /* JobAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,14 +363,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE944C6124E56D3D00B85B9D /* JobRepository.swift in Sources */,
 				AE83277B24E2CC65000463AA /* ProfileViewController.swift in Sources */,
+				AE944C6424E575C200B85B9D /* Router.swift in Sources */,
 				AE83277D24E2CC9A000463AA /* FavoriteJobsViewController.swift in Sources */,
 				AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */,
 				AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */,
 				AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */,
 				AE83277724E2CBFC000463AA /* Job.swift in Sources */,
 				AE83277924E2CC5B000463AA /* JobDetailsViewController.swift in Sources */,
+				AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */,
 				AE83277F24E2E510000463AA /* JobTableViewCell.swift in Sources */,
+				AE944C6624E5760300B85B9D /* JobAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

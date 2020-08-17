@@ -18,17 +18,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
-                                    <rect key="frame" x="82.5" y="9.5" width="249" height="201.5"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="0eb-g7-qSi" secondAttribute="height" multiplier="225:184" id="1Rs-SD-u3Z"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="20"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Pe-AEy">
                                     <rect key="frame" x="162.5" y="220" width="89.5" height="32"/>
                                     <constraints>
@@ -38,6 +27,18 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
+                                    <rect key="frame" x="107" y="8" width="200" height="204"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="f4B-BQ-cLa"/>
+                                        <constraint firstAttribute="height" constant="200" id="i3R-Iy-TWc"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -109,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="profileImage" width="1140" height="1140"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
