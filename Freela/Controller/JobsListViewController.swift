@@ -97,4 +97,24 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         120
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url = jobs[indexPath.row].url {
+            print(url)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { action, swipeButtonView, completion in
+            //Favorite the job
+            print("favorited")
+            completion(true)
+        }
+        
+        favoriteAction.image = .add
+        favoriteAction.image?.withTintColor(.white)
+        favoriteAction.backgroundColor = .systemBlue
+        
+        return UISwipeActionsConfiguration(actions: [favoriteAction])
+    }
 }

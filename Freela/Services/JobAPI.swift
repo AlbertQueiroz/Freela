@@ -17,7 +17,7 @@ enum JobAPI: Router {
     
     var url: URL? {
         switch self {
-        case .readAll: return URL(string: "\(hostname ?? "https://jobs.github.com")/positions.json?search=iOS")
+        case .readAll: return URL(string: "\(hostname ?? "https://jobs.github.com")/positions.json?search=")
         }
     }
     

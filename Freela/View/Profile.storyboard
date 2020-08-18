@@ -19,16 +19,13 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Pe-AEy">
-                                    <rect key="frame" x="162.5" y="220" width="89.5" height="32"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="tVm-jQ-yOk"/>
-                                    </constraints>
+                                    <rect key="frame" x="162.5" y="216" width="89.5" height="36"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
-                                    <rect key="frame" x="107" y="8" width="200" height="204"/>
+                                    <rect key="frame" x="107" y="8" width="200" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="f4B-BQ-cLa"/>
                                         <constraint firstAttribute="height" constant="200" id="i3R-Iy-TWc"/>
