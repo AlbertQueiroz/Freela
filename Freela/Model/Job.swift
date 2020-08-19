@@ -9,6 +9,7 @@
 import Foundation
 
 struct Job: Codable {
+    let id: UUID = UUID()
     let title: String?
     let description: String?
     let url: URL?

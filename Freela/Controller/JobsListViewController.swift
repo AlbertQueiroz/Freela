@@ -19,6 +19,7 @@ class JobsListViewController: UIViewController {
     }
     
     // MARK: Model
+    let favoriteJobRepository = FavoriteJobRepository()
     
     // MARK: Views
     let tableView: UITableView = {
@@ -44,14 +45,15 @@ class JobsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Jobs"
+        self.navigationItem.rightBarButtonItem = profileButton
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         JobRepository().readAll { (jobs) in
             self.jobs = jobs
         }
-        
-        self.title = "Jobs"
-        setupTableView()
-            
-        self.navigationItem.rightBarButtonItem = profileButton
     }
     
     func setupTableView() {
@@ -110,9 +112,10 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { action, swipeButtonView, completion in
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { _, _, completion in
             //Favorite the job
-            print("favorited")
+            let favoritedJob = self.favoriteJobRepository.createNewItem(item: self.jobs[indexPath.row])
+            print("\(String(describing: favoritedJob.title)) Job favorited")
             completion(true)
         }
         

@@ -18,6 +18,10 @@ class FavoriteJobsViewController: JobsListViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        jobs = favoriteJobRepository.readAllItems()
+    }
+    
 }
 
 // MARK: Table view delegate methods
@@ -31,6 +35,7 @@ extension FavoriteJobsViewController {
         if editingStyle == .delete {
             jobs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
+            favoriteJobRepository.delete(id: jobs[indexPath.row].id)
         }
     }
     
