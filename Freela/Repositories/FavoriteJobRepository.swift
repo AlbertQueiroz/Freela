@@ -15,15 +15,31 @@ class FavoriteJobRepository {
     func createNewItem(item: Job) -> Job {
         items.append(item)
         //Persists with File manager
+        if let data = try? JSONEncoder().encode(item) {
+            FileHelper().createFile(with: data, name: item.id.uuidString)
+        }
         
         return item
     }
     
     func readAllItems() -> [Job] {
+        //Read using FileManager
+        let fileNames: [String] = FileHelper().contentsForDirectory(atPath: "")
+        self.items = fileNames.compactMap { (fileName) -> Job? in
+            if let data = FileHelper().retrieveFile(at: fileName) {
+                let item = try? JSONDecoder().decode(Job.self, from: data)
+                return item
+            }
+            return nil
+        }
+        
         return items
     }
     
     func delete(id : UUID) {
-        items.removeAll(where: { $0.id == id })
+//        items.removeAll(where: { $0.id == id })
+        //Remove using File Manager
+        FileHelper().removeFile(at: id.uuidString)
+        
     }
 }

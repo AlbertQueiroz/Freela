@@ -35,7 +35,8 @@ extension FavoriteJobsViewController {
         if editingStyle == .delete {
             jobs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
-            favoriteJobRepository.delete(id: jobs[indexPath.row].id)
+            self.favoriteJobRepository.delete(id: self.jobs[indexPath.row].id)
+            self.jobs = self.favoriteJobRepository.readAllItems()
         }
     }
     

@@ -115,7 +115,7 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { _, _, completion in
             //Favorite the job
             let favoritedJob = self.favoriteJobRepository.createNewItem(item: self.jobs[indexPath.row])
-            print("\(String(describing: favoritedJob.title)) Job favorited")
+            print("\(String(describing: favoritedJob.id)) Job favorited")
             completion(true)
         }
         

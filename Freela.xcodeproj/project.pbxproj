@@ -27,6 +27,7 @@
 		AE944C6624E5760300B85B9D /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6524E5760300B85B9D /* JobAPI.swift */; };
 		AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6924EAAF1D00B85B9D /* HTTP.swift */; };
 		AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */; };
+		AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083624ED605500EDE25C /* FileHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AE944C6524E5760300B85B9D /* JobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPI.swift; sourceTree = "<group>"; };
 		AE944C6924EAAF1D00B85B9D /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobRepository.swift; sourceTree = "<group>"; };
+		AEFE083624ED605500EDE25C /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				AE944C6224E5757300B85B9D /* Services */,
 				AE944C5F24E56D2700B85B9D /* Repositories */,
+				AEFE083524ED604100EDE25C /* Helpers */,
 				AE83276A24E2C2B4000463AA /* Model */,
 				AE83276B24E2C2B9000463AA /* View */,
 				AE83276C24E2C2C1000463AA /* Controller */,
@@ -210,6 +213,14 @@
 				AE944C6524E5760300B85B9D /* JobAPI.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AEFE083524ED604100EDE25C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE083624ED605500EDE25C /* FileHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +382,7 @@
 				AE944C6424E575C200B85B9D /* Router.swift in Sources */,
 				AE83277D24E2CC9A000463AA /* FavoriteJobsViewController.swift in Sources */,
 				AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */,
+				AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */,
 				AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */,
 				AE83273924E2C1DF000463AA /* AppDelegate.swift in Sources */,
 				AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */,
