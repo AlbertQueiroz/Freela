@@ -9,11 +9,21 @@
 import Foundation
 
 struct Job: Codable {
-    let id: UUID = UUID()
+    let id: UUID
     let title: String?
     let description: String?
     let url: URL?
     let company: String?
     let location: String?
     let type: String?
+    
+    init() {
+        self.id = UUID()
+        self.title = "Job"
+        self.description = "description"
+        self.url = URL(string: "")
+        self.company = "company"
+        self.location = "location"
+        self.type = "Full-time"
+    }
 }

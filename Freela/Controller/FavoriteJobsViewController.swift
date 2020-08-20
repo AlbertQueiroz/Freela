@@ -33,10 +33,10 @@ extension FavoriteJobsViewController {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            jobs.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
             self.favoriteJobRepository.delete(id: self.jobs[indexPath.row].id)
             self.jobs = self.favoriteJobRepository.readAllItems()
+            tableView.deleteRows(at: [indexPath], with: .left)
+//            jobs.remove(at: indexPath.row)
         }
     }
     
