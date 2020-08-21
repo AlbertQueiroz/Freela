@@ -11,12 +11,16 @@ import UIKit
 class ProfileViewController: UITableViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var username: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.profileImage.layer.cornerRadius = self.profileImage.frame.height/2
         self.title = "Profile"
+        
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        username.delegate = self
+        
+        username.text = UserDefaults.standard.string(forKey: "username")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -27,4 +31,16 @@ class ProfileViewController: UITableViewController {
             return
         }
     }
+}
+
+extension ProfileViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        UserDefaults.standard.set(textField.text, forKey: "username")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
 }

@@ -18,12 +18,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYT-Pe-AEy">
-                                    <rect key="frame" x="162.5" y="216" width="89.5" height="36"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
                                     <rect key="frame" x="107" y="8" width="200" height="200"/>
                                     <constraints>
@@ -36,13 +30,28 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-cX-qe1">
+                                    <rect key="frame" x="107" y="216" width="200" height="36"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Le-bS-crd">
+                                    <rect key="frame" x="289" y="224.5" width="18" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="lx2-Gt-wXU"/>
+                                        <constraint firstAttribute="width" constant="18" id="oM6-ed-7Z9"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="LYT-Pe-AEy" firstAttribute="top" secondItem="0eb-g7-qSi" secondAttribute="bottom" constant="8" id="Gb7-yI-oNG"/>
-                                <constraint firstItem="LYT-Pe-AEy" firstAttribute="centerX" secondItem="gGE-cn-2lC" secondAttribute="centerX" id="Vqq-qG-EMj"/>
-                                <constraint firstAttribute="bottom" secondItem="LYT-Pe-AEy" secondAttribute="bottom" constant="8" id="njw-bP-PzM"/>
+                                <constraint firstItem="MTV-cX-qe1" firstAttribute="centerX" secondItem="0eb-g7-qSi" secondAttribute="centerX" id="0su-9P-M10"/>
+                                <constraint firstItem="MTV-cX-qe1" firstAttribute="leading" secondItem="0eb-g7-qSi" secondAttribute="leading" id="1l4-ff-BVO"/>
+                                <constraint firstItem="MTV-cX-qe1" firstAttribute="top" secondItem="0eb-g7-qSi" secondAttribute="bottom" constant="8" id="2Ar-iA-6ng"/>
+                                <constraint firstItem="9Le-bS-crd" firstAttribute="centerY" secondItem="MTV-cX-qe1" secondAttribute="centerY" id="LOT-c1-CDT"/>
+                                <constraint firstAttribute="bottom" secondItem="MTV-cX-qe1" secondAttribute="bottom" constant="8" id="oIZ-Ue-5Sw"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="centerX" secondItem="gGE-cn-2lC" secondAttribute="centerX" id="pq5-Lv-S6V"/>
+                                <constraint firstItem="9Le-bS-crd" firstAttribute="trailing" secondItem="0eb-g7-qSi" secondAttribute="trailing" id="swD-w0-euF"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="top" secondItem="gGE-cn-2lC" secondAttribute="top" constant="8" id="uNI-Qb-BDl"/>
                             </constraints>
                         </view>
@@ -81,6 +90,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="T1J-3U-8oF"/>
                     <connections>
                         <outlet property="profileImage" destination="0eb-g7-qSi" id="9fw-go-o9z"/>
+                        <outlet property="username" destination="MTV-cX-qe1" id="JBA-h3-8cs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6x-tP-hTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,6 +118,7 @@
     </scenes>
     <resources>
         <image name="profileImage" width="1140" height="1140"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
