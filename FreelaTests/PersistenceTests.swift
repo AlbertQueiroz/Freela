@@ -50,4 +50,22 @@ class PersistenceTests: XCTestCase {
         XCTAssertEqual(output, true)
         
     }
+    
+    func test_favoriteJobsCount_toBeEqual4() {
+        //given
+        let sut = FavoriteJobRepository()
+        
+        //when
+        for _ in 1...4 {
+            _ = sut.createNewItem(item: Job())
+        }
+        let output = sut.items.count
+        
+        //then
+        XCTAssertEqual(output, 4)
+        
+        for job in sut.items {
+            sut.delete(id: job.id)
+        }
+    }
 }
