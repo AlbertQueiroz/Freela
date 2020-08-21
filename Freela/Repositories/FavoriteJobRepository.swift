@@ -36,10 +36,11 @@ class FavoriteJobRepository {
         return items
     }
     
-    func delete(id : UUID) {
+    @discardableResult
+    func delete(id : UUID) -> Bool {
 //        items.removeAll(where: { $0.id == id })
         //Remove using File Manager
-        FileHelper().removeFile(at: id.uuidString)
+        return FileHelper().removeFile(at: id.uuidString)
         
     }
 }

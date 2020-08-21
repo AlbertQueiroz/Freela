@@ -11,7 +11,6 @@
 		AE83273B24E2C1DF000463AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83273A24E2C1DF000463AA /* SceneDelegate.swift */; };
 		AE83274224E2C1E3000463AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE83274124E2C1E3000463AA /* Assets.xcassets */; };
 		AE83274524E2C1E3000463AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83274324E2C1E3000463AA /* LaunchScreen.storyboard */; };
-		AE83275024E2C1E3000463AA /* FreelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83274F24E2C1E3000463AA /* FreelaTests.swift */; };
 		AE83275B24E2C1E3000463AA /* FreelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83275A24E2C1E3000463AA /* FreelaUITests.swift */; };
 		AE83276F24E2C341000463AA /* JobsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83276E24E2C341000463AA /* JobsList.storyboard */; };
 		AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83277024E2C351000463AA /* JobsListViewController.swift */; };
@@ -28,6 +27,7 @@
 		AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6924EAAF1D00B85B9D /* HTTP.swift */; };
 		AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */; };
 		AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083624ED605500EDE25C /* FileHelper.swift */; };
+		AEFE083924EFEFFC00EDE25C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		AE83274424E2C1E3000463AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE83274624E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE83274B24E2C1E3000463AA /* FreelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE83274F24E2C1E3000463AA /* FreelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelaTests.swift; sourceTree = "<group>"; };
 		AE83275124E2C1E3000463AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE83275624E2C1E3000463AA /* FreelaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83275A24E2C1E3000463AA /* FreelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelaUITests.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		AE944C6924EAAF1D00B85B9D /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobRepository.swift; sourceTree = "<group>"; };
 		AEFE083624ED605500EDE25C /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 		AE83274E24E2C1E3000463AA /* FreelaTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE83274F24E2C1E3000463AA /* FreelaTests.swift */,
+				AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */,
 				AE83275124E2C1E3000463AA /* Info.plist */,
 			);
 			path = FreelaTests;
@@ -398,7 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE83275024E2C1E3000463AA /* FreelaTests.swift in Sources */,
+				AEFE083924EFEFFC00EDE25C /* PersistenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
