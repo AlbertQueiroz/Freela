@@ -105,7 +105,6 @@
 		AE83272C24E2C1DF000463AA = {
 			isa = PBXGroup;
 			children = (
-				AE944C6924EAAF1D00B85B9D /* HTTP.swift */,
 				AE83273724E2C1DF000463AA /* Freela */,
 				AE83274E24E2C1E3000463AA /* FreelaTests */,
 				AE83275924E2C1E3000463AA /* FreelaUITests */,
@@ -211,6 +210,7 @@
 			children = (
 				AE944C6324E575C200B85B9D /* Router.swift */,
 				AE944C6524E5760300B85B9D /* JobAPI.swift */,
+				AE944C6924EAAF1D00B85B9D /* HTTP.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
