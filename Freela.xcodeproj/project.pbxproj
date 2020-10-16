@@ -25,6 +25,7 @@
 		AE944C6424E575C200B85B9D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6324E575C200B85B9D /* Router.swift */; };
 		AE944C6624E5760300B85B9D /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6524E5760300B85B9D /* JobAPI.swift */; };
 		AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6924EAAF1D00B85B9D /* HTTP.swift */; };
+		AEC0A1E62537255600F107BA /* Freela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC0A1E42537255600F107BA /* Freela.xcdatamodeld */; };
 		AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */; };
 		AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083624ED605500EDE25C /* FileHelper.swift */; };
 		AEFE083924EFEFFC00EDE25C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */; };
@@ -72,6 +73,7 @@
 		AE944C6324E575C200B85B9D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AE944C6524E5760300B85B9D /* JobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPI.swift; sourceTree = "<group>"; };
 		AE944C6924EAAF1D00B85B9D /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		AEC0A1E52537255600F107BA /* Freela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Freela.xcdatamodel; sourceTree = "<group>"; };
 		AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobRepository.swift; sourceTree = "<group>"; };
 		AEFE083624ED605500EDE25C /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				AE83273824E2C1DF000463AA /* AppDelegate.swift */,
 				AE83273A24E2C1DF000463AA /* SceneDelegate.swift */,
+				AEC0A1E42537255600F107BA /* Freela.xcdatamodeld */,
 				AE83274624E2C1E3000463AA /* Info.plist */,
 			);
 			path = AppConfig;
@@ -381,6 +384,7 @@
 				AE83277B24E2CC65000463AA /* ProfileViewController.swift in Sources */,
 				AE944C6424E575C200B85B9D /* Router.swift in Sources */,
 				AE83277D24E2CC9A000463AA /* FavoriteJobsViewController.swift in Sources */,
+				AEC0A1E62537255600F107BA /* Freela.xcdatamodeld in Sources */,
 				AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */,
 				AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */,
 				AE83277124E2C351000463AA /* JobsListViewController.swift in Sources */,
@@ -711,6 +715,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEC0A1E42537255600F107BA /* Freela.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEC0A1E52537255600F107BA /* Freela.xcdatamodel */,
+			);
+			currentVersion = AEC0A1E52537255600F107BA /* Freela.xcdatamodel */;
+			path = Freela.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AE83272D24E2C1DF000463AA /* Project object */;
 }

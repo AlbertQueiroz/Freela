@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class JobsListViewController: UIViewController {
 
@@ -114,8 +115,9 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { _, _, completion in
             //Favorite the job
-            let favoritedJob = self.favoriteJobRepository.createNewItem(item: self.jobs[indexPath.row])
-            print("\(String(describing: favoritedJob.id)) Job favorited")
+            self.favoriteJobRepository.save(job: self.jobs[indexPath.row])
+//            let favoritedJob = self.favoriteJobRepository.createNewItem(item: self.jobs[indexPath.row])
+//            print("\(String(describing: favoritedJob.id)) Job favorited")
             completion(true)
         }
         
