@@ -12,26 +12,27 @@ class JobTableViewCell: UITableViewCell {
 
     let title: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 16)
+//        label.font = .boldSystemFont(ofSize: 16)
+        label.font = UIFont(name: "Avenir Medium", size: 16)
         return label
     }()
     
     let location: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
+        label.font = UIFont(name: "Avenir", size: 14)
         return label
     }()
     
     let type: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
+        label.font = UIFont(name: "Avenir", size: 14)
         label.textColor = .darkGray
         return label
     }()
     
     let company: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
+        label.font = UIFont(name: "Avenir", size: 14)
         label.textColor = .darkGray
         return label
     }()
