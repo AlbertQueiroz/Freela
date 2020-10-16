@@ -27,7 +27,13 @@ class JobsListViewController: UIViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
-        
+    }()
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.hidesWhenStopped = true
+        return indicator
     }()
     
     lazy var profileButton: UIBarButtonItem = {
@@ -39,7 +45,6 @@ class JobsListViewController: UIViewController {
         button.action = #selector(goToProfile)
         
         return button
-        
     }()
 
     // MARK: ViewController Lifecycle
@@ -49,15 +54,40 @@ class JobsListViewController: UIViewController {
         self.title = "Jobs"
         self.navigationItem.rightBarButtonItem = profileButton
         setupTableView()
+        setupActivityIndicator()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        startLoading()
         JobRepository().readAll { (jobs) in
             self.jobs = jobs
+            DispatchQueue.main.async {
+                self.stopLoading()
+            }
         }
     }
     
-    func setupTableView() {
+    func startLoading() {
+        tableView.isHidden = true
+        activityIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        tableView.isHidden = false
+        activityIndicator.stopAnimating()
+    }
+    
+    private func setupActivityIndicator() {
+        view.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 50),
+            activityIndicator.widthAnchor.constraint(equalTo: activityIndicator.heightAnchor)
+        ])
+    }
+    
+    private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "jobCell")
