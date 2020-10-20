@@ -66,7 +66,6 @@ class FavoriteJobRepository {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
     }
     
     func readAll() -> [NSManagedObject] {

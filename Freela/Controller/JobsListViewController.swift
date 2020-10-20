@@ -138,7 +138,7 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
 
             destiny.loadURL(with: url)
         }
-        tableView.cellForRow(at: indexPath)?.isSelected = false
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

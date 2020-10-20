@@ -26,6 +26,7 @@
 		AE944C6624E5760300B85B9D /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6524E5760300B85B9D /* JobAPI.swift */; };
 		AE944C6A24EAAF1E00B85B9D /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE944C6924EAAF1D00B85B9D /* HTTP.swift */; };
 		AEC0A1E62537255600F107BA /* Freela.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC0A1E42537255600F107BA /* Freela.xcdatamodeld */; };
+		AEC0A1F3253DC85D00F107BA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC0A1F2253DC85D00F107BA /* CloudKit.framework */; };
 		AEFE083424ED568300EDE25C /* FavoriteJobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */; };
 		AEFE083724ED605500EDE25C /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083624ED605500EDE25C /* FileHelper.swift */; };
 		AEFE083924EFEFFC00EDE25C /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */; };
@@ -74,6 +75,8 @@
 		AE944C6524E5760300B85B9D /* JobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPI.swift; sourceTree = "<group>"; };
 		AE944C6924EAAF1D00B85B9D /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		AEC0A1E52537255600F107BA /* Freela.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Freela.xcdatamodel; sourceTree = "<group>"; };
+		AEC0A1ED253DC84D00F107BA /* Freela.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Freela.entitlements; sourceTree = "<group>"; };
+		AEC0A1F2253DC85D00F107BA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AEFE083324ED568300EDE25C /* FavoriteJobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteJobRepository.swift; sourceTree = "<group>"; };
 		AEFE083624ED605500EDE25C /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		AEFE083824EFEFFC00EDE25C /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC0A1F3253DC85D00F107BA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 				AE83274E24E2C1E3000463AA /* FreelaTests */,
 				AE83275924E2C1E3000463AA /* FreelaUITests */,
 				AE83273624E2C1DF000463AA /* Products */,
+				AEC0A1F1253DC85D00F107BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,7 @@
 		AE83273724E2C1DF000463AA /* Freela */ = {
 			isa = PBXGroup;
 			children = (
+				AEC0A1ED253DC84D00F107BA /* Freela.entitlements */,
 				AE944C6224E5757300B85B9D /* Services */,
 				AE944C5F24E56D2700B85B9D /* Repositories */,
 				AEFE083524ED604100EDE25C /* Helpers */,
@@ -216,6 +222,14 @@
 				AE944C6924EAAF1D00B85B9D /* HTTP.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AEC0A1F1253DC85D00F107BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC0A1F2253DC85D00F107BA /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AEFE083524ED604100EDE25C /* Helpers */ = {
@@ -559,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Freela/Freela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVQMR29BJU;
 				INFOPLIST_FILE = Freela/AppConfig/Info.plist;
@@ -568,6 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.freela.Freela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Freela/Freela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVQMR29BJU;
 				INFOPLIST_FILE = Freela/AppConfig/Info.plist;
@@ -586,6 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.freela.Freela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

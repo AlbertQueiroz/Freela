@@ -60,6 +60,17 @@ extension FavoriteJobsViewController {
         return favoriteJobs.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url = favoriteJobs[indexPath.row].value(forKey: "url") as? URL {
+            let destiny = JobDetailsViewController()
+            
+            self.navigationController?.present(destiny, animated: true, completion: nil)
+
+            destiny.loadURL(with: url)
+        }
+        tableView.cellForRow(at: indexPath)?.isSelected = false
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let favoriteJob = favoriteJobs[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "jobCell") as? JobTableViewCell else { return UITableViewCell() }
