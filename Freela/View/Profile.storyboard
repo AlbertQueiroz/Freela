@@ -20,8 +20,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-g7-qSi">
                                     <rect key="frame" x="107" y="8" width="200" height="200"/>
+                                    <color key="tintColor" red="0.15337403669999999" green="0.36340951630000001" blue="0.73998137949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="f4B-BQ-cLa"/>
                                         <constraint firstAttribute="height" constant="200" id="i3R-Iy-TWc"/>
@@ -32,6 +33,12 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whk-Ea-FMn">
+                                    <rect key="frame" x="107" y="8" width="200" height="200"/>
+                                    <connections>
+                                        <action selector="changeProfileImage:" destination="vw4-7i-mAq" eventType="touchUpInside" id="UOp-qM-eNZ"/>
+                                    </connections>
+                                </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-cX-qe1">
                                     <rect key="frame" x="107" y="216" width="200" height="36"/>
                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
@@ -45,15 +52,24 @@
                                         <constraint firstAttribute="width" constant="18" id="oM6-ed-7Z9"/>
                                     </constraints>
                                 </imageView>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RaG-aP-dSf">
+                                    <rect key="frame" x="197" y="98" width="20" height="20"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="MTV-cX-qe1" firstAttribute="centerX" secondItem="0eb-g7-qSi" secondAttribute="centerX" id="0su-9P-M10"/>
                                 <constraint firstItem="MTV-cX-qe1" firstAttribute="leading" secondItem="0eb-g7-qSi" secondAttribute="leading" id="1l4-ff-BVO"/>
+                                <constraint firstItem="RaG-aP-dSf" firstAttribute="centerX" secondItem="whk-Ea-FMn" secondAttribute="centerX" id="1m9-Pq-1YE"/>
                                 <constraint firstItem="MTV-cX-qe1" firstAttribute="top" secondItem="0eb-g7-qSi" secondAttribute="bottom" constant="8" id="2Ar-iA-6ng"/>
+                                <constraint firstItem="whk-Ea-FMn" firstAttribute="top" secondItem="0eb-g7-qSi" secondAttribute="top" id="4lx-F7-3PO"/>
+                                <constraint firstItem="whk-Ea-FMn" firstAttribute="trailing" secondItem="0eb-g7-qSi" secondAttribute="trailing" id="7p1-Ts-OLw"/>
+                                <constraint firstItem="whk-Ea-FMn" firstAttribute="bottom" secondItem="0eb-g7-qSi" secondAttribute="bottom" id="G6s-Sc-LdT"/>
                                 <constraint firstItem="9Le-bS-crd" firstAttribute="centerY" secondItem="MTV-cX-qe1" secondAttribute="centerY" id="LOT-c1-CDT"/>
+                                <constraint firstItem="RaG-aP-dSf" firstAttribute="centerY" secondItem="whk-Ea-FMn" secondAttribute="centerY" id="dbJ-aC-5tz"/>
                                 <constraint firstAttribute="bottom" secondItem="MTV-cX-qe1" secondAttribute="bottom" constant="8" id="oIZ-Ue-5Sw"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="centerX" secondItem="gGE-cn-2lC" secondAttribute="centerX" id="pq5-Lv-S6V"/>
+                                <constraint firstItem="whk-Ea-FMn" firstAttribute="leading" secondItem="0eb-g7-qSi" secondAttribute="leading" id="rPf-vq-7SK"/>
                                 <constraint firstItem="9Le-bS-crd" firstAttribute="trailing" secondItem="0eb-g7-qSi" secondAttribute="trailing" id="swD-w0-euF"/>
                                 <constraint firstItem="0eb-g7-qSi" firstAttribute="top" secondItem="gGE-cn-2lC" secondAttribute="top" constant="8" id="uNI-Qb-BDl"/>
                             </constraints>
@@ -61,22 +77,22 @@
                         <sections>
                             <tableViewSection id="y2Z-e4-noc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="ScO-ui-1P1" imageView="wlu-Xk-BS4" style="IBUITableViewCellStyleDefault" id="RyL-4m-uoV">
-                                        <rect key="frame" x="0.0" y="288" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="ScO-ui-1P1" imageView="wlu-Xk-BS4" rowHeight="64" style="IBUITableViewCellStyleDefault" id="RyL-4m-uoV">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RyL-4m-uoV" id="kYi-Qv-nn2">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Favorite Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ScO-ui-1P1">
-                                                    <rect key="frame" x="59" y="0.0" width="316" height="44"/>
+                                                    <rect key="frame" x="59" y="0.0" width="316" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star" catalog="system" id="wlu-Xk-BS4">
-                                                    <rect key="frame" x="21" y="11.5" width="22" height="20"/>
+                                                    <rect key="frame" x="21" y="21.5" width="22" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="tintColor" red="0.15337403669999999" green="0.36340951630000001" blue="0.73998137949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </imageView>
@@ -94,6 +110,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="T1J-3U-8oF"/>
                     <connections>
                         <outlet property="profileImage" destination="0eb-g7-qSi" id="9fw-go-o9z"/>
+                        <outlet property="profileImageIndicator" destination="RaG-aP-dSf" id="6Or-xh-bU3"/>
                         <outlet property="username" destination="MTV-cX-qe1" id="JBA-h3-8cs"/>
                     </connections>
                 </tableViewController>
@@ -122,7 +139,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profileImage" width="1140" height="1140"/>
+        <image name="profile" width="512" height="512"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">

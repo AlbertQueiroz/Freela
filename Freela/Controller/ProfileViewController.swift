@@ -11,6 +11,12 @@ import UIKit
 class ProfileViewController: UITableViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImageIndicator: UIActivityIndicatorView! {
+        didSet {
+            profileImageIndicator.isHidden = true
+            profileImageIndicator.hidesWhenStopped = true
+        }
+    }
     @IBOutlet weak var username: UITextField!
     
     override func viewDidLoad() {
@@ -31,6 +37,12 @@ class ProfileViewController: UITableViewController {
             return
         }
     }
+    @IBAction func changeProfileImage(_ sender: Any) {
+        switchUserPhoto()
+        profileImage.alpha = 0.5
+        profileImageIndicator.isHidden = false
+        profileImageIndicator.startAnimating()
+    }
 }
 
 extension ProfileViewController: UITextFieldDelegate {
@@ -43,4 +55,34 @@ extension ProfileViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
     }
     
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func switchUserPhoto() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        self.profileImage.image = image
+//        self.roundIcon.image = image
+    
+//        if let currentUser = userDao.fetchAll().first {
+//            currentUser.profileImage = image.pngData()
+//            userDao.save()
+//        }
+        profileImageIndicator.stopAnimating()
+        profileImage.alpha = 1
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        profileImageIndicator.stopAnimating()
+        profileImage.alpha = 1
+        dismiss(animated: true)
+    }
 }
