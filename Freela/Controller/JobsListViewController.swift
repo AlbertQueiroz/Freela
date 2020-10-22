@@ -133,8 +133,7 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let url = jobs[indexPath.row].url {
             let destiny = JobDetailsViewController()
-            
-//            destiny.loadURL(with: url)
+
             destiny.url = url
             self.navigationController?.pushViewController(destiny, animated: true)
 

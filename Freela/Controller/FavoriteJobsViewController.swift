@@ -102,12 +102,12 @@ extension FavoriteJobsViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let url = favoriteJobs[indexPath.row].value(forKey: "url") as? URL {
+        let job = favoriteJobs[indexPath.row]
+        if let url = URL(string: job["url"] as? String ?? "") {
             let destiny = JobDetailsViewController()
             
-            self.navigationController?.present(destiny, animated: true, completion: nil)
-
-            destiny.loadURL(with: url)
+            destiny.url = url
+            self.navigationController?.pushViewController(destiny, animated: true)
         }
         tableView.cellForRow(at: indexPath)?.isSelected = false
     }
@@ -131,7 +131,6 @@ extension FavoriteJobsViewController {
             let location = favoriteJob["location"] as? String {
             cell.config(title: title, company: company, type: type, location: location)
         }
-        
         
         return cell
     }

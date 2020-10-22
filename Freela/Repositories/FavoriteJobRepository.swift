@@ -111,7 +111,7 @@ class FavoriteJobRepository {
         record.setValue(job.type, forKey: "type")
         record.setValue(job.description, forKey: "desc")
         record.setValue(job.location, forKey: "location")
-//        record.setValue(job.url, forKey: "url")
+        record.setValue(job.url?.absoluteString, forKey: "url")
         record.setValue(job.company, forKey: "company")
         
         privateDataBase.save(record) { (savedRecord, error) in
