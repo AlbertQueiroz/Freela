@@ -50,7 +50,6 @@ class JobsListViewController: UIViewController {
     // MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Jobs"
         self.navigationItem.rightBarButtonItem = profileButton
         setupTableView()
@@ -58,6 +57,7 @@ class JobsListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
         startLoading()
         JobRepository().readAll { (jobs) in
             self.jobs = jobs
@@ -134,9 +134,10 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         if let url = jobs[indexPath.row].url {
             let destiny = JobDetailsViewController()
             
-            self.navigationController?.present(destiny, animated: true, completion: nil)
+//            destiny.loadURL(with: url)
+            destiny.url = url
+            self.navigationController?.pushViewController(destiny, animated: true)
 
-            destiny.loadURL(with: url)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -145,10 +146,18 @@ extension JobsListViewController: UITableViewDelegate, UITableViewDataSource {
         
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { _, _, completion in
             //Favorite the job
-            self.favoriteJobRepository.save(job: self.jobs[indexPath.row])
+            
+            //CoreData
+//            self.favoriteJobRepository.save(job: self.jobs[indexPath.row])
+            
+            //FileManager
 //            let favoritedJob = self.favoriteJobRepository.createNewItem(item: self.jobs[indexPath.row])
 //            print("\(String(describing: favoritedJob.id)) Job favorited")
+            
+            //CloudKit
+            self.favoriteJobRepository.createNewJob(job: self.jobs[indexPath.row])
             completion(true)
+            
         }
         
         favoriteAction.image = .add

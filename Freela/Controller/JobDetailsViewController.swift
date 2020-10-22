@@ -13,6 +13,7 @@ class JobDetailsViewController: UIViewController, WKUIDelegate {
 
     var webView = WKWebView()
     weak var delegate: JobsListViewController?
+    var url: URL?
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
@@ -23,6 +24,10 @@ class JobDetailsViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        if let url = url {
+            loadURL(with: url)
+        }
     }
     
     func loadURL(with url: URL) {

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import CloudKit
 
 class FavoriteJobRepository {
     
@@ -99,5 +100,59 @@ class FavoriteJobRepository {
         let managedContext = appDelegate.persistentContainer.viewContext
     
         return managedContext
+    }
+    
+    // MARK: Using Cloud Kit
+    let privateDataBase = CKContainer(identifier: "iCloud.Freela").privateCloudDatabase
+    
+    func createNewJob(job: Job) {
+        let record = CKRecord(recordType: "Job")
+        record.setValue(job.title, forKey: "title")
+        record.setValue(job.type, forKey: "type")
+        record.setValue(job.description, forKey: "desc")
+        record.setValue(job.location, forKey: "location")
+//        record.setValue(job.url, forKey: "url")
+        record.setValue(job.company, forKey: "company")
+        
+        privateDataBase.save(record) { (savedRecord, error) in
+            if error != nil {
+                print("Failed to read data from Cloud Kit \(String(describing: error?.localizedDescription))")
+            } else {
+                print("\(String(describing: savedRecord)) record saved successfully!")
+            }
+        }
+    }
+    
+    func readAllJobs(completion: @escaping ([CKRecord]) -> Void) {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "Job", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        let operation = CKQueryOperation(query: query)
+        var jobsList = [CKRecord]()
+        operation.recordFetchedBlock = { record in
+            DispatchQueue.main.async {
+                jobsList.append(record)
+            }
+        }
+        operation.queryCompletionBlock = { cursor, error in
+            if error == nil {
+                completion(jobsList)
+            }
+        }
+        
+        privateDataBase.add(operation)
+    }
+    
+    func deleteJob(job: CKRecord, completion: @escaping (Bool) -> Void) {
+        privateDataBase.delete(withRecordID: job.recordID) { (recordID, error) in
+            if error != nil {
+                print("Failed to delete record \(String(describing: error?.localizedDescription))")
+                completion(false)
+            } else {
+                print("Record of id \(String(describing: recordID)) deleted!")
+                completion(true)
+            }
+        }
+        
     }
 }
