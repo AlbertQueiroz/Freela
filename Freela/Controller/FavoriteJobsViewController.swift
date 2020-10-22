@@ -20,7 +20,15 @@ class FavoriteJobsViewController: JobsListViewController {
         }
     }
     
+    let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray6
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override func viewDidLoad() {
+        setupBackgroundView()
         super.viewDidLoad()
         self.title = "Favorite Jobs"
         self.navigationItem.rightBarButtonItem = nil
@@ -39,6 +47,15 @@ class FavoriteJobsViewController: JobsListViewController {
         }
     }
     
+    private func setupBackgroundView() {
+        view.addSubview(backgroundView)
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+    }
 }
 
 // MARK: Table view delegate methods
